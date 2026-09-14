@@ -1,0 +1,204 @@
+/* Variables de color basadas en la paleta	*/
+:root {
+  --color-bg: #111625;
+  --color-text: #ffffff;
+  --color-scripting: #1abc9c;
+  --color-interactivas: #34495e;
+  --color-semanticas: #9b59b6;
+  --color-obsoletas: #7f8c8d;
+
+
+/* Variables de color x grupos de metales	*/
+
+
+  --color-grupo1: #8a36d2;
+  --color-grupo2: #e84393;
+  --color-grupo3: #e67e22;
+  --color-grupo4: #2ecc71;
+  --color-grupo5: #e74c3c;
+  --color-grupo6: #f1c40f;
+  --color-grupo7: #3ec9ce;
+  --color-grupo8: #f59292;
+  --color-grupo9: #ffffff;
+  --color-grupo10: #6a46a5;
+
+/* agregar aca un nuevo grupo - gropo7 asignando un color diferente */
+/* agregar aca un nuevo grupo - gropo8 asignando un color diferente */
+/* agregar aca un nuevo grupo - gropo9 asignando un color diferente */
+/* agregar aca un nuevo grupo - gropo10 asignando un color diferente */
+
+
+}
+
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Configuración del Grid para simular la Tabla Periódica Real */
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, minmax(60px, 1fr));
+  grid-template-rows: repeat(9, minmax(70px, 1fr));
+  gap: 6px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+/* Estilo común para cada celda de elemento */
+.element {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Efecto Hover interactivo */
+.element:hover {
+  transform: scale(1.08);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border-color: #ffffff;
+}
+
+/* Sub-elementos internos de la celda */
+.atomic-number {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  align-self: flex-start;
+}
+
+.symbol {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.name {
+  font-size: 0.7rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+/* Clases de categorías para aplicar los bordes y colores temáticos */
+
+
+/* grupo1: NO METALES  */
+.category-grupo1 { 
+  border-left: 4px solid var(--color-grupo1); 
+  background: linear-gradient(135deg, #8a36d2, transparent);
+}
+.category-grupo1 .symbol { color: var(--color-grupo1); }
+
+
+/* grupo2: xxxxxxxxx  */
+.category-grupo2 { 
+  border-left: 4px solid var(--color-grupo2); 
+  background: linear-gradient(135deg, #e84393(144, 19, 254, 0.1), transparent);
+}
+.category-grupo2 .symbol { color: var(--color-grupo2); }
+
+
+/* grupo3: xxxxxxxxx  */
+.category-grupo3 { 
+  border-left: 4px solid var(--color-grupo3); 
+  background: linear-gradient(135deg, #e67e221a, transparent);
+}
+.category-grupo3 .symbol { color: var(--color-grupo3); }
+
+
+/* grupo4: xxxxxxxxx  */
+.category-grupo4 { 
+  border-left: 4px solid var(--color-grupo4); 
+  background: linear-gradient(135deg,  #e67e22(46, 204, 113, 0.1), transparent);
+}
+.category-grupo4 .symbol { color: var(--color-grupo4); }
+
+
+/* grupo5: xxxxxxxxx  */
+.category-grupo5 { 
+  border-left: 4px solid var(--color-grupo5); 
+  background: linear-gradient(135deg,  #e74c3c(231, 76, 60, 0.1), transparent);
+}
+.category-grupo5 .symbol { color: var(--color-grupo5); }
+
+
+/* grupo6: xxxxxxxxx  */
+.category-grupo6 { 
+  border-left: 4px solid var(--color-grupo6); 
+  background: linear-gradient(135deg,  #f1c40f(241, 196, 15, 0.1), transparent);
+}
+.category-grupo6 .symbol { color: var(--color-grupo6); }
+
+/* grupo7: xxxxxxxxx  */
+.category-grupo7 { 
+  border-left: 4px solid var(--color-grupo7); 
+  background: linear-gradient(135deg,  #3ec9ce(241, 196, 15, 0.1), transparent);
+}
+.category-grupo6 .symbol { color: var(--color-grupo7); }
+
+/* grupo8: xxxxxxxxx  */
+.category-grupo6 { 
+  border-left: 4px solid var(--color-grupo8); 
+  background: linear-gradient(135deg, #f59292(241, 196, 15, 0.1), transparent);
+}
+.category-grupo6 .symbol { color: var(--color-grupo8); }
+
+/* grupo9: xxxxxxxxx  */
+.category-grupo9 { 
+  border-left: 4px solid var(--color-grupo9); 
+  background: linear-gradient(135deg, #ffffff(241, 196, 15, 0.1), transparent);
+}
+.category-grupo6 .symbol { color: var(--color-grupo9); }
+
+/* grupo10: xxxxxxxxx  */
+.category-grupo10 { 
+  border-left: 4px solid var(--color-grupo10); 
+  background: linear-gradient(135deg, #6a46a5(241, 196, 15, 0.1), transparent);
+}
+.category-grupo6 .symbol { color: var(--color-grupo10); }
+
+
+.category-obsoletas { 
+  border-left: 4px solid var(--color-obsoletas); 
+  background: linear-gradient(135deg, rgba(127, 140, 141, 0.1), transparent);
+  opacity: 0.6;
+}
+.category-obsoletas .symbol { color: var(--color-obsoletas); }
+
+/* Ajuste responsivo básico */
+@media (max-width: 900px) {
+  .periodic-table {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-rows: auto;
+  }
+  .element {
+    grid-row: auto !important;
+    grid-column: auto !important;
+  }
+}
